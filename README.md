@@ -8,7 +8,11 @@ Script takes in parameters  **start date**,  **end date**, **metrics** and  **di
 
 ##installation
 
-I adapted main program **hello_analytics_api_v3.py** at https://developers.google.com/analytics/solutions/articles/hello-analytics-api. To get it to work, you need to setup its dependencies first. From the same page, you need to get **client_secrets.json** – to store your authorization credentials — and **hello_analytics_api_v3_auth.py** – to store common authorization routines. Just follow Google super clear instructions to edit these two files properly so everything can work properly.
+I adapted main program **hello_analytics_api_v3.py** at https://developers.google.com/analytics/solutions/articles/hello-analytics-api. 
+
+To get it to work, you need to setup its dependencies first. From the same page, you need to get **client_secrets.json** – to store your authorization credentials — and **hello_analytics_api_v3_auth.py** – to store common authorization routines. 
+
+Just follow Google super clear instructions to edit these two files properly so everything can work properly.
 
 ##usage
 
