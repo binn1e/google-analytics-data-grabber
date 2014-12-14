@@ -17,7 +17,7 @@ Here's a few examples:
 For compelte Google Analytics metrics and dimensions listing see refereance at: https://developers.google.com/analytics/devguides/reporting/core/dimsmets
 
 ##help
-<code>
+<pre><code>
 Wintermute-3:api scripts binnie$ python ga_api.py -help
 usage: ga_api [-h] [-s pattern [pattern ...]] [-e pattern [pattern ...]]
               [-m pattern [pattern ...]] [-d pattern [pattern ...]]
@@ -42,7 +42,7 @@ optional arguments:
                         ga:dimension [ga:dimension ...] — please see
                         reference at https://developers.google.com/analytics/d
                         evguides/reporting/core/dimsmets
-</code>
+</code></pre>
 
 ##notes
 
