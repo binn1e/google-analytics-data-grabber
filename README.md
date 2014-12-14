@@ -21,10 +21,10 @@ Here's a few examples to run the script so it returns whatever you need:
 <code>python ga_api.py -s 2014-05-01 -e 2014-11-30 -m ga:users ga:sessions -d ga:month ga:year ga:socialNetwork</code>  
 Returns users and sessions by month and year and social network. Includes data from May 1st to November 30th. 
 
-<code>python ga_api.py -s 2014-10-01 -e yesterday -m ga:users ga:sessions -d ga:date ga:mobileDeviceModel</code>
+<code>python ga_api.py -s 2014-10-01 -e yesterday -m ga:users ga:sessions -d ga:date ga:mobileDeviceModel</code>  
 Returns users and sessions by date and mobile device model. Includes data from October 1st to yesterday. 
 
-<code>python ga_api.py -s yesterday -e today -m ga:sessions -d ga:channelGrouping</code>
+<code>python ga_api.py -s yesterday -e today -m ga:sessions -d ga:channelGrouping</code>  
 Returns sessions by channel, includes yesterday and today data. 
 
 For compelte Google Analytics metrics and dimensions listing see refereance at: https://developers.google.com/analytics/devguides/reporting/core/dimsmets
