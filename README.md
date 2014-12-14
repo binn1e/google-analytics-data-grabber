@@ -4,7 +4,7 @@ A Python script whichs grabs data from  **Google Analytics API** and shape it in
 
 Quite useful in case Google Analytics interface is too limitating for your analytics usage (which happens usually pretty fast) and you don't want to pay for an expensive Excel/Whatever data grabber add-in. 
 
-Script takes in parameters  **start date **,  **end date **, **metrics** and  **dimensions**.
+Script takes in parameters  **start date**,  **end date**, **metrics** and  **dimensions**.
 
 ##installation
 
