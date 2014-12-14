@@ -34,8 +34,7 @@ Returns sessions by channel, includes yesterday and today data.
 For compelte Google Analytics metrics and dimensions listing see refereance at: https://developers.google.com/analytics/devguides/reporting/core/dimsmets
 
 ##help
-<pre><code>
-python ga_api.py -help
+<pre><code>python ga_api.py -help
 usage: ga_api [-h] [-s pattern [pattern ...]] [-e pattern [pattern ...]]
               [-m pattern [pattern ...]] [-d pattern [pattern ...]]
 
@@ -58,8 +57,7 @@ optional arguments:
                         Desired Google Analytics dimensions [Format:
                         ga:dimension [ga:dimension ...] — please see
                         reference at https://developers.google.com/analytics/d
-                        evguides/reporting/core/dimsmets
-</code></pre>
+                        evguides/reporting/core/dimsmets</code></pre>
 
 ##notes
 
