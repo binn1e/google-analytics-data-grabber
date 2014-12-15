@@ -1,6 +1,6 @@
 #google analytics data grabber
 
-A Python script whichs grabs data from  **Google Analytics API** and shape it into nice, ready to use CSV files. 
+A Python script which grabs data from  **Google Analytics API** and shape it into nice, ready to use CSV files. 
 
 Quite useful in case Google Analytics interface is too limitating for your analytics usage (which happens usually pretty fast) and you don't want to pay for an expensive Excel/Whatever data grabber add-in. 
 
