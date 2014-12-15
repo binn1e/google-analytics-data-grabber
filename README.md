@@ -1,4 +1,4 @@
-#google analytics api data grabber
+#google analytics data grabber
 
 A Python script whichs grabs data from  **Google Analytics API** and shape it into nice, ready to use CSV files. 
 
