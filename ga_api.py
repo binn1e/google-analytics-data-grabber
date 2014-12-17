@@ -36,7 +36,7 @@ def get_first_profile_id(service):
   return None
 
 # use the analytics service object to query the core reporting api
-def get_results(service, profile_id, start_date, end_date, metrics, dimensions):
+def get_results(service, profile_id, start_date, end_date, metrics, dimensions, maxresults):
   dims = ",".join(dimensions)
   mets = ",".join(metrics)
   return service.data().ga().get(
@@ -44,7 +44,8 @@ def get_results(service, profile_id, start_date, end_date, metrics, dimensions):
       start_date=start_date,
       end_date=end_date,
       metrics=mets,
-      dimensions=dims).execute()
+      dimensions=dims, 
+      max_results=maxresults).execute()
 
 # nicely csvfy data  
 def print_results(results, title):
@@ -81,6 +82,8 @@ if __name__ == '__main__':
           help = "Desired Google Analytics metrics [Format: ga:metric [ga:metric ...] — please see reference at https://developers.google.com/analytics/devguides/reporting/core/dimsmets") 
   parser.add_argument('-d', type = str, nargs='+', metavar = 'pattern', 
           help = "Desired Google Analytics dimensions [Format: ga:dimension [ga:dimension ...] — please see reference at https://developers.google.com/analytics/devguides/reporting/core/dimsmets") 
+  parser.add_argument('-r', type = str, nargs='+', metavar = 'pattern', 
+          help = "Max number of row returned [Format: ^[0-9]*") 
   args = parser.parse_args()
 
   # service, profile
@@ -124,6 +127,10 @@ if __name__ == '__main__':
   title = title.replace('ga:', '')   
   if title == "": title = 'sessions by channelGrouping' 
 
+  # number of rows returned
+  if args.r != None: maxresults = args.r[0]
+  else: maxresults = 1000
+
   if profile_id:
-    data = get_results(service, profile_id, start_date, end_date, metrics, dimensions)
+    data = get_results(service, profile_id, start_date, end_date, metrics, dimensions, maxresults)
     print_results(data, title)
