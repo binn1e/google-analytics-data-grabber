@@ -9,7 +9,6 @@
 ~ Last update: 2014-15-02
 ~ 
 """
-
 import sys
 import ga_api_auth 
 from re import match
@@ -104,12 +103,16 @@ if __name__ == '__main__':
     for arg in args.m:
       metrics.append(arg)
     met_title = ",".join(args.m) 
-  else: metrics = ['ga:sessions']
+  else: 
+    metrics = ['ga:sessions']
+    met_title = "sessions"
   if args.d != None:
     for arg in args.d:
       dimensions.append(arg)
     dim_title = ",".join(args.d) 
-  else: dimensions = ['ga:channelGrouping']
+  else: 
+    dimensions = ['ga:channelGrouping']
+    dim_title = "channelGrouping"
   title = met_title + " by " + dim_title
   title = title.replace('ga:', '')   
   if title == "": title = 'sessions by channelGrouping' 
