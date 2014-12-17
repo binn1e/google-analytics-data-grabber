@@ -53,15 +53,22 @@ def print_results(results, title):
     dataWriter.writerow([title.replace('_', ' ', ).capitalize()])
     output = []
     for row in results.get('rows'):   
-        for item in row:
-          # making a date excel/whatever ready
-          dateMatch = match(gaRawDatePattern, item) 
-          if dateMatch != None:
-            date = str(item[0:4]) + '-' + str(item[4:6]) + '-' + str(item[6:8])
+      for item in row:
+        # making a date excel/whatever ready
+        dateMatch = match(gaRawDatePattern, item) 
+        if dateMatch != None:
+          index = row.index(item)
+          date = str(item[0:4]) + '-' + str(item[4:6]) + '-' + str(item[6:8])
+          row.pop(index)
+          row.insert(index, date)
+        else: # not a date
+        # if not a number, we need to encode it to utf-8
+          numMatch = match("^[0-9]*$", item) 
+          if numMatch == None: 
             index = row.index(item)
-            row.pop(0)
-            row.insert(0, date)
-        dataWriter.writerow(row) 
+            row.pop(index)
+            row.insert(index, item.encode('utf_8', errors="replace"))
+      dataWriter.writerow(row) 
 
 if __name__ == '__main__':
 
