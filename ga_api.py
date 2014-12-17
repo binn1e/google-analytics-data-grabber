@@ -83,7 +83,7 @@ if __name__ == '__main__':
   parser.add_argument('-d', type = str, nargs='+', metavar = 'pattern', 
           help = "Desired Google Analytics dimensions [Format: ga:dimension [ga:dimension ...] — please see reference at https://developers.google.com/analytics/devguides/reporting/core/dimsmets") 
   parser.add_argument('-r', type = str, nargs='+', metavar = 'pattern', 
-          help = "Max number of row returned [Format: ^[0-9]*") 
+          help = "Max number of rows returned [Format: ^[0-9]*") 
   args = parser.parse_args()
 
   # service, profile
