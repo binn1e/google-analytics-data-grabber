@@ -23,8 +23,8 @@ Here's a few examples to run the script so it returns whatever you need for your
 <code>python ga_api.py -d ga:city -r 5000</code>
 Returns sessions by cities. Returns 5000 rows of results. Includes data covering past year.  
 
-<code>python ga_api.py -s 2014-05-01 -e 2014-11-30 -m ga:users ga:sessions -d ga:month ga:year ga:socialNetwork</code>  
-Returns users and sessions by month and year and social network. Returns 1000 rows of results. Includes data covering period from May 1st to November 30th. 
+<code>python ga_api.py -s 2014-05-01 -e 2014-11-30 -m ga:users ga:sessions -d ga:month ga:year ga:socialNetwork</code>    
+Returns users and sessions by month and year and social network. Returns 1000 rows max. Includes data covering period from May 1st to November 30th. 
 
 <code>python ga_api.py -s 2014-10-01 -e yesterday -m ga:users ga:sessions -d ga:date ga:mobileDeviceModel</code>  
 Returns users and sessions by date and mobile device model. Returns 1000 rows max. Includes data from October 1st to yesterday. 
